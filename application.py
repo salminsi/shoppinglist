@@ -83,6 +83,11 @@ def add_shoppinglists():
 
 def list_shoppinglists():
     # Find all the shoppinglists from the database and print their information
+    #shoppinglists_col = db["shoppinglists"]
+    #for x in shoppinglists_col.find():
+    #    print(x)
+    
+    #Kivemman näköinen listaus:
     shoppinglists = shoppinglists_col.find()
     print("\nShoppinglists:")
     for sl in shoppinglists:
@@ -90,7 +95,7 @@ def list_shoppinglists():
         print("Name:", sl["name"])
         print("Store:", sl["store"])
         print("Completed:", sl["isCompleted"])
-
+     
 def edit_shoppinglists():
     print("\nWhich shoppinglist do you want to edit?")
     shoppinglists_id_input = input("Shoppinglist ID:")
@@ -171,8 +176,14 @@ def add_products():
     
 def list_products():
     # Find all the products from the database and print their information
+    #products_col = db["products"]
+    #for x in products_col.find():
+    #    print(x)
+   
+    #Kivemman näköinen listaus:
     products = products_col.find()
     print("\nProducts:")
+
     for p in products:
         print("\nID:", p["_id"])
         print("Name:", p["name"])
